@@ -1,0 +1,3 @@
+Why we need cluster ip.
+In general web ports are exposed to internet whereas application database is not exposed.
+So hide this database from internet , we use cluster ip.
