@@ -1,5 +1,6 @@
 https://vitux.com/install-and-deploy-kubernetes-on-ubuntu/
 
+https://www.howtoforge.com/setup-a-kubernetes-cluster-on-aws-ec2-instance-ubuntu-using-kubeadm/
 
 
 				OR
