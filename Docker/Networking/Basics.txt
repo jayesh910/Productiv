@@ -1,0 +1,37 @@
+ The 3 pillars are : 
+ 1. CNM
+ 2. Libnetwork
+ 3. Drivers
+ 
+ CNM: 
+ Libnetwork and drivers are derived from CNM.
+ CNM doesnt fit for k8s. So k8s use CNI.
+ CNM defines 3 major : sandbox, endpoint , network
+ \\ Sandbox is named as namespace in linux. Isolated area of OS. COntains full n/wk stack.
+ \\Endpoint : Network interface , e.g. eth0
+ \\Network : Connected endpoints.
+ 
+ LIBNETWORK:
+ Real world implementation of CNM by Docker.
+ Written in Golang code
+ Cross-platform 
+ Lives on github also
+ 
+ Socketplane helped docker in networking efficiency.
+ 
+ Drivers: Network-specific details.
+    - Overlay
+    - MACVLAN
+    - IPVLAN
+    - Bridge
+   THere are drivers which are local and remote . 
+   Local = "natives"
+   Remote = "3rd party"
+   
+   Provides Distributed KV store.
+   Network gossips.
+   Encryption
+   Service discovery
+   IP address management.
+    
+ 
