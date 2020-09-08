@@ -34,4 +34,14 @@
    Service discovery
    IP address management.
     
+ Local - Single host
+ Swarm = Multi-host
+ 
+ $ docker network ls  # shows all the network and types present and running.
+ $ docker network inspect  #
+ 
+ In windows docker use nat network whereas for linux it use docker0
+ 
+ Other commands for docker are: 
+ connect, create, disconnect, inspect, ls, prune, rm.
  
