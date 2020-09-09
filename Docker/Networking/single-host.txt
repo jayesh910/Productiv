@@ -1,0 +1,19 @@
+Bridge network are single-host , n/wk will only be available to host.
+It will create 801.2d bridge network on your docker host.
+801.2d bridge a.k.a virtual switch or vswitch
+
+$ docker network create -d bridge --subnet 10.0.0.1/24 ps-bridge
+
+It will create a new bridge for you with the name as ps-bridge.
+
+sudo apt-get install bridge-utils     #Install bridge utilities to see the networks on host.
+
+$brctl show   #displays the network on hosts with interfaces.
+
+docker0:  It is a network bridge. Containers on 1 bridge cannot talk to containers on other bridge.
+
+To run the containers in this bridge: 
+$ docker run -dt --name c1 --network ps-bridge alpine sleep 1d
+
+these containers will get eth0 attached by docker.
+
