@@ -1,0 +1,32 @@
+In each node(host) docker has created sandbox which enables bridge0 on each node.
+Then VXLAN Tunnel is bought up which is connected between nodes.
+VXLAN tunnel = OVERLAY network which gives one IP to manage all. e.g. 10.0.0.0/16
+
+
+Make sure these ports are open on both the nodes:
+  1. 2789/udp
+  2. 7946/tcp/udp
+  3. 2377/tcp
+Install swarm on both nodes : 
+ From node1 : $ docker swarm init
+ # it will give you the join token to run on node 2 to make it as worker.
+ 
+To see the nodes:
+$ docker node ls
+
+$ docker network ls
+
+1. docker_gwbridge: Is the local bridge to work with containers 
+2. ingress : overlay network for swarm load balancing.
+
+To create own overlay:
+$ docker network create -d overlay ps-over
+
+But you cant see this network ps-over on node 2 until you have deployed container 
+So to deploy container: 
+
+$docker service create --name ps-svc --network ps-over --replicas 2 alpine sleep 1d
+
+Now you can see the two containers running on two different nodes.
+
+ 
