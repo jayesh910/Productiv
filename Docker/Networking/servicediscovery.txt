@@ -1,0 +1,10 @@
+Service Discovery : Able to find discovery . 
+
+Microservices: made up of many smaller services.
+Sometimes loads
+Service discovery is important and automatic in Docker.
+
+Every container gets a DNS resolver for trap & forward name based queries. Listens on 127.0.0.11:53 . 53 is standard DNS port .
+If container are on the same network, Network-scoped discovery resolves the connection.
+But if containers are on differnet network, Network-scoped discovery cannot resolve.
+
