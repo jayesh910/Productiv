@@ -1,1 +1,10 @@
+Write #!/bin/bash
+Variable mean to give data to something
 
+name=jayesh   #No spaces to be placed.
+echo name
+echo $name    #To tell any variable value , use $
+Best practice is to mention variable as in the bracket : ${name}
+
+number=10
+number=$(expr $number + 1)    #expr tells that it is  variable & put space in between.
