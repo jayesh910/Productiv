@@ -1,0 +1,60 @@
+IT automation tool
+ can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
+Ansible is appropriate for managing all environments, from small setups with a handful of instances to enterprise environments with many thousands of instances.
+Ansible manages machines in an agent-less manner.
+ Ansible can easily connect with Kerberos, LDAP, and other centralized authentication management systems.
+OpenSSH is one of the most peer-reviewed open source components, security exposure is greatly reduced
+------------------------------------------------------------------------------------------------------------------------------------------------
+Certain settings in Ansible are adjustable via a configuration file (ansible.cfg).
+If installing Ansible from a package manager, the latest "ansible.cfg" file should be 
+present in "/etc/ansible", possibly as a .rpmnew file (or other) as appropriate in the case of updates.
+
+Ansible configuration can be seen using the list command: "ansible-config list"
+
+Installation commands for Centos machine :
+  $sudo amazon-linux-extras install ansible2
+  $ansible --version
+  $cat /etc/ansible/ansible.cfg
+  $ansible-config list
+
+PLAYBOOKS: 
+  Plain-text YAML files that describes the desired state of something
+  Human & machine readable
+  Can be used to build entire application environments
+  
+VARIABLES:
+  Can be provided via many different ways:
+  - Playbooks
+  - Files
+  - Inventories(group vars, Host vars)
+  - Command Line
+  - Discovered variables
+  - Ansible Tower
+  
+To set the target servers, use inventories
+  - Static lines of servers
+  - Ranges
+  - Other custom things
+  - Dynamic lists of servers: Azure,AWS,GCP
+  
+PLAYBOOKS: 
+  Playbooks contains plays
+  Plays contains tasks
+  Tasks calls modules
+  
+  Tasks runs sequentially
+  
+  Handlers are triggered by tasks,
+  & are run once, at the end of plays.
+  
+Ansible roles are a special kind of Playbook that are fully self-contained with tasks, variables, configuration templates & other supporting files.
+
+Ansible has concept of Check-mode.
+  - Dry-run for ad-hoc commands & playbooks
+  - Validate Playbook runs before making changes on target systems
+
+Ansible Galaxy : Source of community & vendor-provided ansible roles to help you get started faster.
+You have to just do a little modification in file, that's it.
+
+
+
