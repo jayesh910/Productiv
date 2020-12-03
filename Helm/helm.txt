@@ -1,0 +1,4 @@
+HELM:
+helps manage kubernetes applications
+helps you define, install & upgrade complex k8s appls
+Charts are very easy to create, share, & publish- so start using helm & stop copy-paste
