@@ -2,3 +2,9 @@ HELM:
 helps manage kubernetes applications
 helps you define, install & upgrade complex k8s appls
 Charts are very easy to create, share, & publish- so start using helm & stop copy-paste
+Helm is a toolset for managing k8s packages (Called as charts)
+Helm charts contains pre-configured k8s resources
+Practical: "Install helm server & client, configure MYSQL via a chart, test the installed mysql app"
+2 parts of Helm: the client(Helm) & the server(Tiller)
+Helm is installed in /usr/local/bin/helm
+Tiller is installed in /usr/local/bin/tiller
