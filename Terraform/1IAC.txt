@@ -1,0 +1,19 @@
+Provisioning Infrastructure through software to achieve consistent & predictable environments
+Defined in Code,
+Stored in Source control,
+Declarative or Imperative.
+Terraform uses the declarative approach to create script using Hashicorp language.
+
+Idempotence & Competency:
+
+Idempotence will help check if applied configuration are already present in present state.
+Terraform uses Idempotence to manage the state sync with configurations
+
+Pushing or pulling to target environment
+Terraform is a push type model .
+
+Benefits of IaC:
+Automated Deployment
+Consistent environments
+Repeatable process, resuable components 
+Documented Architecture
