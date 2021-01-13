@@ -1,0 +1,13 @@
+Components: 
+Terraform Executable, written in GO,
+Config present in terraform files, format of .tf files
+Terraform plugins: TO use other resources & use provisioning by the provider
+Terraform State: Keeps track of whats going on . Maintains current configuration
+
+Dont store the aws  credentials in local machine
+
+Create a variables to provider
+
+Data to get the data from provider 
+Provider to mention which provider we want to use
+Outputs to get info from your terraform server
