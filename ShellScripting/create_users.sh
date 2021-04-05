@@ -14,7 +14,11 @@ elif test -e $USERFILE
   then
     for user in `cat $USERFILE`
     do
-       echo "Creating $user user . .. ..."
-               useradd -m $user
+      echo "Creating $user user . .. ..."
+               useradd -m $user ; echo "$user:linux" | chpasswd
     done
     exit 20
+else
+  echo "Invalid input file"
+  exit 30
+fi
