@@ -1,0 +1,25 @@
+AND lists $$ - Only executes if previous command execute with status 0.
+OR Lists || - Only executes if previous command execute with non-zero status
+Exit statuses 
+
+# Backup of required files
+
+echo "Creating backup directory" $$ mkdir backup || echo "Directory already exists."
+
+echo "Copying files" $$ cp /home/jenkins_home/* backup || echo "something wen wrong" 
+
+# $? shows the exit code error 
+echo "Copying files" $$ cp /home/jenkins_home/* backup || echo $?
+
+REDIRECTING I/O
+
+> - redirects to a file, copies the output to a file
+ ls -lR > directory-tree.txt
+
+>> - redirects to a file, appending data
+ echo mylabserver.com >> /etc/hosts
+
+< Redirects file as input for a command
+ sort < unsorted_list.txt
+ 
+
