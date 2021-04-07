@@ -1,0 +1,5 @@
+Use cat command effectively
+
+
+cat /etc/passwd/ | grep rob
+grep rob /etc/passwd
