@@ -8,3 +8,8 @@ Best practice is to mention variable as in the bracket : ${name}
 
 number=10
 number=$(expr $number + 1)    #expr tells that it is  variable & put space in between.
+
+Variables don't have data types
+All variables start with $ when being referenced
+When setting the variable , dont use $ sign
+
