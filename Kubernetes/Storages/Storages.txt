@@ -1,0 +1,27 @@
+2 types of Storages:
+1. Ephemeral : Same lifetime as a pod
+2. Durable:  Beyond pods lifetime
+
+a. EmptyDir: Creates empty directory when created & assigned to pod
+   Stays as long as pod is running
+   once pod is deleted , emptydir is deleted forever
+   
+ Use Case: Temporary space
+ 
+b. hostPath: mounts a file or directory from the host node's filesystem into your pod,
+   Remains even after the pod is terminated
+   similar to docker volume
+   Use cautiously when required 
+   Host issues might cause problem to hostpath
+ Use Case: in case of NFS & not for host OS 
+ 
+c. gcePersistentDisk
+   mount volume into pod
+   Volume is persisted even after pods termination
+   Read-only  can be attached to multiple pods
+   Read-Write only on single node at a time
+   
+   Restrictions:
+   Must create PD using gcloud or the GCE API 
+   Nodes on which pods are running must be GCP VM's
+   
